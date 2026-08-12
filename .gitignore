@@ -4,5 +4,11 @@
 .venv/
 pycache/
 .DS_Store
+COMPLETION_REPORT.md
+IMPLEMENTATION.md
+MANUAL_ALIGNMENT.md
+MANUAL_SUMMARY.md
+RESEARCH_PAPER.md
+STATUS.md
 results/*.jsonl (run outputs)
 .vscode/settings.json (optional, if you keep absolute paths local)
