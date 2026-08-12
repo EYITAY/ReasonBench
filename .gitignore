@@ -1,0 +1,8 @@
+.env
+.env
+.env.example
+.venv/
+pycache/
+.DS_Store
+results/*.jsonl (run outputs)
+.vscode/settings.json (optional, if you keep absolute paths local)
