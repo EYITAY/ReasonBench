@@ -1,2 +1,0 @@
-# Minimal deps to run ReasonBench dry-run without ML packages
-python-dotenv
