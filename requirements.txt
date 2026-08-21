@@ -13,13 +13,3 @@ scikit-learn
 scipy
 statsmodels
 
-# Fill in as you get access -- uncomment what you need
-# openai
-# anthropic
-# transformers
-# torch
-# accelerate
-# bitsandbytes
-# scikit-learn
-# scipy
-# statsmodels
