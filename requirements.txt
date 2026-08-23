@@ -1,7 +1,7 @@
 # Core, needed regardless of which models you end up using
 pandas
 jsonschema
-google-generativeai
+google-genai
 python-dotenv
 openai
 anthropic
