@@ -21,3 +21,4 @@ __pycache__/
 INDEX.md
 QUICKSTART.md
 requirements-min.txt
+data/scenarios_subset.jsonl
