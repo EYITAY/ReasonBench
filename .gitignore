@@ -18,3 +18,6 @@ results/*.jsonl (run outputs)
 __pycache__/
 *.pyc
 *.bak
+INDEX.md
+QUICKSTART.md
+requirements-min.txt
