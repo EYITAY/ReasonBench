@@ -1,5 +1,8 @@
 .env
 .env
+.gitignore
+data/scenarios.jsonl.bak
+README.md
 .env.example
 .venv/
 pycache/
@@ -11,4 +14,7 @@ MANUAL_SUMMARY.md
 RESEARCH_PAPER.md
 STATUS.md
 results/*.jsonl (run outputs)
-.vscode/settings.json (optional, if you keep absolute paths local)
+.vscode/settings.json (optional, if you keep absolute paths local)*.bak
+__pycache__/
+*.pyc
+*.bak
