@@ -119,6 +119,7 @@ def call_openai(prompt: str, model: str = "gpt-4o", temperature: float = 0.7) ->
     resp = client.chat.completions.create(
         model=model,
         temperature=temperature,
+        max_tokens=2048,  # raised from implicit default -- avoid truncating before SELF-EXPLANATION
         messages=[{"role": "user", "content": prompt + "\n\n" + SELF_EXPLANATION_INSTRUCTION}],
     )
     raw = resp.choices[0].message.content
@@ -146,7 +147,7 @@ def call_anthropic(prompt: str, model: str = "claude-sonnet-4-5", temperature: f
     start = time.time()
     resp = client.messages.create(
         model=model,
-        max_tokens=1000,
+        max_tokens=2048,  # raised from 1000 -- avoid truncating before SELF-EXPLANATION
         temperature=temperature,
         messages=[{"role": "user", "content": prompt + "\n\n" + SELF_EXPLANATION_INSTRUCTION}],
     )
@@ -176,6 +177,7 @@ def call_deepseek(prompt: str, model: str = "deepseek-chat", temperature: float 
     resp = client.chat.completions.create(
         model=model,
         temperature=temperature,
+        max_tokens=2048,  # raised from implicit default -- avoid truncating before SELF-EXPLANATION
         messages=[{"role": "user", "content": prompt + "\n\n" + SELF_EXPLANATION_INSTRUCTION}],
     )
     raw = resp.choices[0].message.content
@@ -201,7 +203,7 @@ def call_gemini(prompt: str, model: str = "gemini-1.5-pro-latest", temperature: 
     if not api_key:
         raise NotImplementedError("Neither GOOGLE_API_KEY nor GEMINI_API_KEY is set. Export one and install google-genai.")
     client = genai.Client(api_key=api_key)
-    config: dict = {"temperature": float(temperature), "max_output_tokens": 1024}
+    config: dict = {"temperature": float(temperature), "max_output_tokens": 2048}  # raised from 1024 -- this was truncating responses before the SELF-EXPLANATION line
     start = time.time()
     resp = client.models.generate_content(
         model=model,
@@ -253,7 +255,7 @@ def call_local_hf(prompt: str, model_name: str = "meta-llama/Llama-3.2-3B-Instru
     inputs = tok.apply_chat_template(messages, return_tensors="pt", add_generation_prompt=True).to(model.device)
 
     start = time.time()
-    out = model.generate(inputs, max_new_tokens=400, temperature=temperature, do_sample=True)
+    out = model.generate(inputs, max_new_tokens=800, temperature=temperature, do_sample=True)  # raised from 400 -- avoid truncating before SELF-EXPLANATION
     raw = tok.decode(out[0][inputs.shape[-1]:], skip_special_tokens=True)
     latency = time.time() - start
 
