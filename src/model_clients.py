@@ -148,7 +148,10 @@ def call_anthropic(prompt: str, model: str = "claude-sonnet-4-5", temperature: f
     resp = client.messages.create(
         model=model,
         max_tokens=2048,  # raised from 1000 -- avoid truncating before SELF-EXPLANATION
-        temperature=temperature,
+        # NOTE: temperature removed -- Anthropic SDK v1.0 (Aug 2026) dropped
+        # sampling parameters (temperature, top_p, top_k) from Messages.create().
+        # If you need temperature control, check the SDK's current docs for
+        # whichever mechanism replaced it (e.g. a separate sampling config).
         messages=[{"role": "user", "content": prompt + "\n\n" + SELF_EXPLANATION_INSTRUCTION}],
     )
     raw = resp.content[0].text
