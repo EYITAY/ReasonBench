@@ -105,6 +105,7 @@ def main():
                             "model_response": result.answer,
                             "structured_self_explanation": result.self_explanation,
                             "marker_found": result.marker_found,
+                            "raw_response": result.raw_response,  # full, unsplit text -- lets you re-check parsing after the fact
                             "run_timestamp": datetime.now(timezone.utc).isoformat(),
                         }
                         out_f.write(json.dumps(row) + "\n")
