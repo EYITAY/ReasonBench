@@ -2,7 +2,6 @@
 .env
 .gitignore
 data/scenarios.jsonl.bak
-README.md
 .env.example
 .venv/
 pycache/
@@ -21,5 +20,14 @@ __pycache__/
 INDEX.md
 QUICKSTART.md
 requirements-min.txt
+requirements.txt
+cp data/scenarios.jsonl data/scenarios_private.jsonl
+cp data/taxonomy_definitions.md data/taxonomy_definitions_private.md
 data/scenarios_subset.jsonl
 data/scenarios_remaining.jsonl
+data/scenarios_private.jsonl
+data/taxonomy_definitions_private.md
+data/scenarios_private.jsonl
+data/taxonomy_definitions_private.md
+data/scenarios_private.jsonl
+data/taxonomy_definitions_private.md
