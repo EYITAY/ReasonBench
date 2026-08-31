@@ -19,8 +19,11 @@ __pycache__/
 *.bak
 INDEX.md
 QUICKSTART.md
+annotation/annotation_template.csv
 requirements-min.txt
 requirements.txt
+rb001_check_all.py
+grok_rb001_check.py
 cp data/scenarios.jsonl data/scenarios_private.jsonl
 cp data/taxonomy_definitions.md data/taxonomy_definitions_private.md
 data/scenarios_subset.jsonl
