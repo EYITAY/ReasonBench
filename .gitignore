@@ -34,3 +34,5 @@ data/scenarios_private.jsonl
 data/taxonomy_definitions_private.md
 data/scenarios_private.jsonl
 data/taxonomy_definitions_private.md
+results
+.vscode/
