@@ -29,9 +29,6 @@ Actively developed, pre-publication research. Infrastructure and taxonomy are st
 ```
 
 
-## License
-
-Released under the [MIT License](LICENSE).
 
 ## Contributing
 
