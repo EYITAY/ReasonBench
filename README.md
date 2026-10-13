@@ -25,7 +25,7 @@ Actively developed, pre-publication research. Infrastructure and taxonomy are st
 | Anthropic | Claude (Sonnet) | In progress |
 | Local (Hugging Face) | Llama, Qwen, Gemma | Supported, not yet run |
 
-``
+
 ```
 
 
