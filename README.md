@@ -29,11 +29,8 @@ Actively developed, pre-publication research. Infrastructure and taxonomy are st
 | Mistral AI | Mistral-7B-Instruct-v0.3 | Complete (26/26) |
 
 
-```
-
-
 
 ## Contributing
 
-Solo research project under active development. Issues and pull requests are welcome, especially bug reports on the collection pipeline and suggestions for the public-facing taxonomy summary.
+Solo research project under active development. Issues and pull requests are welcome, especially bug reports on the collection pipeline and suggestions for the public-facing taxonomy summary. Human annotators are welcome.
 
