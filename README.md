@@ -28,9 +28,16 @@ Actively developed, pre-publication research. Infrastructure and taxonomy are st
 | Anthropic | Claude (Sonnet) | In progress |
 | Mistral AI | Mistral-7B-Instruct-v0.3 | Complete (26/26) |
 
+## Algorithmic Art
+
+**The Garden of Deception** — [website](https://github.com/EYITAY/The-Garden-Of-Deception)
+**The Beltline Road** — [website](https://thebeltlineroad.vercel.app/)
+**The Beltline Notch** — [website](https://thebeltlineroad.vercel.app/)
 
 
 ## Contributing
+
+https://github.com/EYITAY/The-Garden-Of-Deception
 
 Solo research project under active development. Issues and pull requests are welcome, especially bug reports on the collection pipeline and suggestions for the public-facing taxonomy summary. Human annotators are welcome.
 
