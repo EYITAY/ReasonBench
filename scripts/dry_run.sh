@@ -8,4 +8,4 @@ if [ ! -x ".venv/bin/python" ]; then
   exit 1
 fi
 
-.venv/bin/python src/run_collection.py --models gpt-4o claude-sonnet-4-5 --dry-run
+.venv/bin/python src/run_collection.py --models gpt-4o claude-sonnet-5-5 --dry-run

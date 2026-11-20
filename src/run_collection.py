@@ -7,8 +7,8 @@ results/responses_<timestamp>.jsonl -- the raw responses table that Phase 4
 (annotation) and Phase 5 (classification) both read from.
 
 Usage:
-    python src/run_collection.py --models gpt-4o claude-sonnet-4-5 --dry-run
-    python src/run_collection.py --models gpt-4o claude-sonnet-4-5
+    python src/run_collection.py --models gpt-4o claude-sonnet-5-5 --dry-run
+    python src/run_collection.py --models gpt-4o claude-sonnet-5-5
 
 --dry-run prints what WOULD be called, without hitting any API or loading any
 model. Use it first to sanity-check the scenario set and model list before
