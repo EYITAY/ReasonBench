@@ -1,38 +1,36 @@
+# secrets
 .env
-.env
-.gitignore
-data/scenarios.jsonl.bak
-.env.example
+
+# python, editor, OS
 .venv/
-pycache/
+__pycache__/
+*.pyc
 .DS_Store
+.vscode/
+
+# local-only data, never published
+annotation/
+annotation_claude/
+results/
+results_*/
+release_staging/
+data/*_private.*
+data/scenarios.jsonl.bak
+data/scenarios_subset.jsonl
+data/scenarios_remaining.jsonl
+*.bak
+
+# internal notes
 COMPLETION_REPORT.md
 IMPLEMENTATION.md
 MANUAL_ALIGNMENT.md
 MANUAL_SUMMARY.md
 RESEARCH_PAPER.md
 STATUS.md
-results/*.jsonl (run outputs)
-.vscode/settings.json (optional, if you keep absolute paths local)*.bak
-__pycache__/
-*.pyc
-*.bak
 INDEX.md
 QUICKSTART.md
-annotation/annotation_template.csv
-requirements-min.txt
-requirements.txt
-rb001_check_all.py
-grok_rb001_check.py
-cp data/scenarios.jsonl data/scenarios_private.jsonl
-cp data/taxonomy_definitions.md data/taxonomy_definitions_private.md
-data/scenarios_subset.jsonl
-data/scenarios_remaining.jsonl
-data/scenarios_private.jsonl
-data/taxonomy_definitions_private.md
-data/scenarios_private.jsonl
-data/taxonomy_definitions_private.md
-data/scenarios_private.jsonl
-data/taxonomy_definitions_private.md
-results
-.vscode/
+INTERNAL_NOTE_privacy_decision.md
+
+validation/
+modal_run.py
+patch_hf.py

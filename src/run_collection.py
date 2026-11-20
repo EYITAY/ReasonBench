@@ -39,13 +39,18 @@ from model_clients import call_model, marker_compliance_report  # noqa: E402
 MODEL_REGISTRY = {
     "gpt-4o":               ("openai",    "gpt-4o"),
     "claude-sonnet-5":      ("anthropic", "claude-sonnet-5"),
-    "deepseek-chat":        ("deepseek",  "deepseek-chat"),
+    "claude-haiku-5-5":     ("anthropic", "claude-haiku-5-5"),
+    "claude-sonnet-5-5":    ("anthropic", "claude-sonnet-5-5"),
+    "claude-haiku-5-5-or":  ("openrouter", "anthropic/claude-haiku-5.5"),
+    "mistral-small-or":     ("openrouter", "mistralai/mistral-small-2603"),
+    "deepseek-flash":        ("deepseek",  "deepseek-flash"),
     "gemini-1.5-pro":       ("gemini",    "gemini-1.5-pro"),
     "gemini-2.0-flash":     ("gemini",    "gemini-2.0-flash"),
     "gemini-3.6-flash":     ("gemini",    "gemini-3.6-flash"),
     "llama-3.2-3b":         ("local_hf",  "meta-llama/Llama-3.2-3B-Instruct"),
     "qwen-2.5-3b":          ("local_hf",  "Qwen/Qwen2.5-3B-Instruct"),
     "gemma-3-4b":           ("local_hf",  "google/gemma-3-4b-it"),
+    "mistral-7b-instruct":  ("local_hf",  "mistralai/Mistral-7B-Instruct-v0.3"),
     "groq-gpt-oss-120b":    ("groq",      "openai/gpt-oss-120b"),
     "mistral-small":        ("mistral",   "mistral-small-latest"),
     "grok-4-fast":          ("xai",       "grok-4-fast-non-reasoning"),
@@ -119,7 +124,7 @@ def main():
                         n_fail += 1
                         break
                     except Exception as e:  # noqa: BLE001 -- real API/timeout errors, retry
-                        print(f"[RETRY {attempt}/{args.retries}] {m} on {scenario['scenario_id']}: {e}")
+                        print(f"[RETRY {attempt}/{args.retries}] {m} on {scenario['scenario_id']}: {e!r}")
                         time.sleep(2 ** attempt)
                 else:
                     n_fail += 1
